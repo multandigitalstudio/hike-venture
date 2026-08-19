@@ -1,0 +1,784 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #ffffff;
+    color: #1b2a2f;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* =========================
+   HEADER / NAVBAR
+========================= */
+
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.navbar {
+    width: 90%;
+    max-width: 1250px;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 25px 0;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: #ffffff;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: #f4b942;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #f4b942;
+}
+
+.book-btn {
+    background: #f4b942;
+    color: #17252a;
+    padding: 13px 22px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.book-btn:hover {
+    background: #ffffff;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+
+    padding: 130px 7% 80px;
+
+    background:
+        linear-gradient(
+            rgba(0, 30, 35, 0.55),
+            rgba(0, 20, 25, 0.65)
+        ),
+        url("images/hero.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    max-width: 700px;
+    color: #ffffff;
+}
+
+.small-title {
+    color: #f4b942;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(55px, 8vw, 100px);
+    line-height: 0.95;
+    margin-bottom: 30px;
+}
+
+.hero h1 span {
+    color: #f4b942;
+}
+
+.hero-text {
+    max-width: 600px;
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 35px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.primary-btn,
+.secondary-btn {
+    display: inline-block;
+    padding: 15px 27px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.primary-btn {
+    background: #f4b942;
+    color: #17252a;
+}
+
+.primary-btn:hover {
+    background: #ffffff;
+}
+
+.secondary-btn {
+    border: 2px solid #ffffff;
+    color: #ffffff;
+}
+
+.secondary-btn:hover {
+    background: #ffffff;
+    color: #17252a;
+}
+
+
+/* =========================
+   SECTIONS
+========================= */
+
+.tours,
+.departures {
+    padding: 100px 7%;
+    text-align: center;
+}
+
+.tours {
+    background: #f6f8f7;
+}
+
+.section-title {
+    color: #d49b26;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 12px;
+}
+
+.tours h2,
+.departures h2,
+.cta h2 {
+    font-size: 42px;
+    margin-bottom: 50px;
+}
+
+
+/* =========================
+   TOUR CARDS
+========================= */
+
+.tour-container {
+    max-width: 1200px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.tour-card {
+    background: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+    transition: 0.3s;
+}
+
+.tour-card:hover {
+    transform: translateY(-8px);
+}
+
+.tour-image {
+    height: 250px;
+    overflow: hidden;
+}
+
+.tour-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.4s;
+}
+
+.tour-card:hover img {
+    transform: scale(1.05);
+}
+
+.tour-info {
+    padding: 25px;
+    text-align: left;
+}
+
+.tour-info p {
+    color: #d49b26;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.tour-info h3 {
+    font-size: 25px;
+    margin-bottom: 18px;
+}
+
+.tour-info a {
+    color: #d49b26;
+    font-weight: bold;
+}
+
+
+/* =========================
+   DEPARTURE CITIES
+========================= */
+
+.city-container {
+    max-width: 1000px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.city-card {
+    padding: 40px 25px;
+    background: #ffffff;
+
+    border: 1px solid #e2e7e5;
+    border-radius: 10px;
+
+    transition: 0.3s;
+}
+
+.city-card:hover {
+    transform: translateY(-5px);
+    border-color: #f4b942;
+}
+
+.city-card h3 {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.city-card p {
+    color: #667477;
+}
+
+
+/* =========================
+   CTA
+========================= */
+
+.cta {
+    padding: 100px 7%;
+    text-align: center;
+
+    background:
+        linear-gradient(
+            rgba(0, 25, 30, 0.85),
+            rgba(0, 25, 30, 0.85)
+        ),
+        url("images/kashmir.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    color: #ffffff;
+}
+
+.cta p:not(.section-title) {
+    margin-bottom: 30px;
+    color: #d8e0df;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    background: #101c20;
+    color: #ffffff;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.footer-logo {
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.footer-logo span {
+    color: #f4b942;
+}
+
+.footer p {
+    color: #aebbbb;
+}
+
+.copyright {
+    margin-top: 25px;
+    font-size: 13px;
+}
+
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+    .nav-links {
+        display: none;
+    }
+
+    .hero {
+        padding: 140px 8% 80px;
+    }
+
+    .tour-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .city-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .navbar {
+        width: 88%;
+    }
+
+    .book-btn {
+        padding: 10px 15px;
+        font-size: 13px;
+    }
+
+    .hero h1 {
+        font-size: 55px;
+    }
+
+    .hero-text {
+        font-size: 16px;
+    }
+
+    .tour-container {
+        grid-template-columns: 1fr;
+    }
+
+    .tours h2,
+    .departures h2,
+    .cta h2 {
+        font-size: 32px;
+    }
+}
+/* =================================
+   PROFESSIONAL TOUR BOOKING CARDS
+================================= */
+
+.tour-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 50px auto 0;
+}
+
+.tour-card {
+    background: #ffffff;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: 0.3s ease;
+}
+
+.tour-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.14);
+}
+
+.tour-image {
+    position: relative;
+    height: 240px;
+    overflow: hidden;
+}
+
+.tour-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: 0.5s ease;
+}
+
+.tour-card:hover .tour-image img {
+    transform: scale(1.06);
+}
+
+.tour-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: #ffffff;
+    padding: 7px 12px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.tour-info {
+    padding: 24px;
+}
+
+.tour-category {
+    margin: 0 0 8px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: #777;
+}
+
+.tour-info h3 {
+    margin: 0 0 12px;
+    font-size: 25px;
+}
+
+.tour-description {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 18px;
+}
+
+.tour-details {
+    display: flex;
+    justify-content: space-between;
+    padding: 14px 0;
+    border-top: 1px solid #eeeeee;
+    border-bottom: 1px solid #eeeeee;
+    font-size: 13px;
+    color: #555;
+}
+
+.tour-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.tour-price {
+    display: flex;
+    flex-direction: column;
+}
+
+.tour-price small {
+    font-size: 11px;
+    color: #888;
+    margin-bottom: 3px;
+}
+
+.tour-price strong {
+    font-size: 18px;
+}
+
+.tour-book-btn {
+    display: inline-block;
+    padding: 11px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    white-space: nowrap;
+    transition: 0.3s ease;
+}
+
+.tour-book-btn:hover {
+    transform: translateY(-2px);
+}
+
+
+/* TABLET */
+@media (max-width: 900px) {
+
+    .tour-container {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0 20px;
+    }
+
+}
+
+
+/* MOBILE */
+@media (max-width: 600px) {
+
+    .tour-container {
+        grid-template-columns: 1fr;
+        padding: 0 15px;
+    }
+
+    .tour-image {
+        height: 220px;
+    }
+
+    .tour-info {
+        padding: 20px;
+    }
+
+}
+/* ==============================
+   BOOKING FORM
+============================== */
+
+.booking-section {
+    padding: 90px 8%;
+    background: #f5f7f6;
+    text-align: center;
+}
+
+.booking-section .section-title {
+    color: #d99a18;
+    letter-spacing: 4px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.booking-section h2 {
+    font-size: 42px;
+    color: #102a32;
+    margin-bottom: 12px;
+}
+
+.booking-intro {
+    color: #666;
+    font-size: 17px;
+    margin-bottom: 40px;
+}
+
+.booking-form {
+    max-width: 900px;
+    margin: 0 auto;
+    background: white;
+    padding: 40px;
+    border-radius: 14px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+    text-align: left;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin-bottom: 25px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 15px;
+    font-weight: 600;
+    color: #102a32;
+    margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 14px 15px;
+    border: 1px solid #d8dddd;
+    border-radius: 7px;
+    font-size: 15px;
+    font-family: inherit;
+    outline: none;
+    box-sizing: border-box;
+    transition: 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #d99a18;
+    box-shadow: 0 0 0 3px rgba(217, 154, 24, 0.12);
+}
+
+.full-width {
+    margin-bottom: 25px;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.booking-submit {
+    display: block;
+    width: 100%;
+    padding: 16px;
+    background: #d99a18;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.booking-submit:hover {
+    background: #b97e0d;
+    transform: translateY(-2px);
+}
+
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+    .booking-section {
+        padding: 60px 20px;
+    }
+
+    .booking-section h2 {
+        font-size: 32px;
+    }
+
+    .booking-form {
+        padding: 25px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+}
+/* DEPARTURE CITY CARDS */
+
+.departure-intro {
+    max-width: 700px;
+    margin: 0 auto 35px;
+    text-align: center;
+    line-height: 1.7;
+}
+
+.city-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.city-card {
+    background: #ffffff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    transition: transform 0.3s ease;
+}
+
+.city-card:hover {
+    transform: translateY(-6px);
+}
+
+.city-image {
+    width: 100%;
+    height: 160px;
+    overflow: hidden;
+}
+
+.city-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.city-info {
+    padding: 18px;
+    text-align: center;
+}
+
+.city-info h3 {
+    margin: 0 0 8px;
+    font-size: 24px;
+}
+
+.city-info p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+    .city-container {
+        grid-template-columns: 1fr;
+        max-width: 350px;
+    }
+
+    .city-image {
+        height: 150px;
+    }
+
+}
