@@ -11,7 +11,7 @@ document.getElementById("bookingForm").addEventListener("submit", function(event
     const email = document.getElementById("email").value;
     const request = document.getElementById("request").value;
 
-    const whatsappNumber = "923707442830";
+    const whatsappNumber = "923416243234";
 
     const message = `🏔️ HIKE VENTURE - NEW BOOKING
 
